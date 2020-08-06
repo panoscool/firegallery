@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/storage';
+import 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: "AIzaSyD77RTxdxCyF6oDIt8rczSo1yP5dOfU_9c",
@@ -9,12 +10,13 @@ const firebaseConfig = {
   projectId: "web-experiences",
   storageBucket: "web-experiences.appspot.com",
   messagingSenderId: "197225287110",
-  appId: "1:197225287110:web:3e258c9cfb0e4c96f1f6c7"
+  appId: "1:197225287110:web:818e484e81a82ddbf1f6c7"
 };
 
 firebase.initializeApp(firebaseConfig);
 
 export const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
+export const auth = firebase.auth();
 export const storage = firebase.storage();
 export const firestore = firebase.firestore();

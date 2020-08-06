@@ -17,15 +17,13 @@ function UploadForm() {
     }
   }
 
-  console.log(file);
-
   return (
     <form>
       <label>
         <input type="file" onChange={handleChange} />
         <span>+</span>
       </label>
-      {error && <div className="output">{error && error}</div>}
+      {error && <div className="output error">{error}</div>}
       {file && <ProgressBar file={file} setFile={setFile} />}
     </form>
   )
